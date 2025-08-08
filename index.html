@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jornada para a Promoção</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Adicionamos o Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -24,16 +23,32 @@
                     <button onclick="iniciarMinijogo('codigo')" class="btn-task"><i class="fas fa-code mr-2"></i>Escrever Código</button>
                     <button onclick="iniciarMinijogo('apresentacao')" class="btn-task"><i class="fas fa-bible mr-2"></i>Preparar Apresentação</button>
                     <button onclick="iniciarMinijogo('reuniao')" class="btn-task"><i class="fas fa-calculator mr-2"></i>Participar da Reunião</button>
-                    <!-- Novo botão para o minijogo de "Conhecimentos Gerais" -->
                     <button onclick="iniciarMinijogo('tudo')" class="btn-task"><i class="fas fa-brain mr-2"></i>Conhecimentos Gerais</button>
                 </div>
+                <br>
+                <button onclick="exibirPlacar()" class="btn-task mt-4"><i class="fas fa-trophy mr-2"></i>Ver Placar</button>
             </div>
             <div id="minigame-container">
+            </div>
+            <div id="placar-container" style="display:none;">
+                <h3 class="text-xl font-bold mb-4">Ranking de Conhecimentos Gerais</h3>
+                <table id="placar-tabela" class="w-full text-left table-auto">
+                    <thead>
+                        <tr>
+                            <th class="px-4 py-2">Rank</th>
+                            <th class="px-4 py-2">Nome</th>
+                            <th class="px-4 py-2">Pontuação</th>
+                            <th class="px-4 py-2">Data</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+                <button onclick="voltarAoPC()" class="btn-task mt-4">Voltar</button>
             </div>
         </div>
     </div>
     
-    <!-- Modal de Mensagem -->
     <div id="message-modal" class="modal-overlay">
         <div class="modal-content">
             <p id="message-text"></p>
