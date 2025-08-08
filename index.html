@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornada para a Promoção</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Adicionamos o Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-3xl font-bold mb-4">Jornada para a Promoção</h1>
+        <div class="pc-screen">
+            <div id="game-content" class="text-left">
+                <h2 class="text-xl font-bold mb-2">Seu Escritório Virtual</h2>
+                <p><strong>Cargo Atual:</strong> <span id="cargo-nome" class="font-bold">Estagiário</span></p>
+                <p><strong>Salário:</strong> R$ <span id="salario-valor" class="font-bold">800</span></p>
+                <p><strong>Progresso para a Próxima Promoção:</strong> <span id="xp-atual" class="font-bold">0</span> / <span id="xp-necessario" class="font-bold">100</span> XP</p>
+                <br>
+                <h3 class="text-lg font-bold mb-2">Escolha uma Tarefa (Minijogo)</h3>
+                <div class="flex flex-wrap justify-center space-x-2 space-y-2">
+                    <button onclick="iniciarMinijogo('email')" class="btn-task"><i class="fas fa-envelope mr-2"></i>Responder E-mails</button>
+                    <button onclick="iniciarMinijogo('codigo')" class="btn-task"><i class="fas fa-code mr-2"></i>Escrever Código</button>
+                    <button onclick="iniciarMinijogo('apresentacao')" class="btn-task"><i class="fas fa-bible mr-2"></i>Preparar Apresentação</button>
+                    <button onclick="iniciarMinijogo('reuniao')" class="btn-task"><i class="fas fa-calculator mr-2"></i>Participar da Reunião</button>
+                    <!-- Novo botão para o minijogo de "Conhecimentos Gerais" -->
+                    <button onclick="iniciarMinijogo('tudo')" class="btn-task"><i class="fas fa-brain mr-2"></i>Conhecimentos Gerais</button>
+                </div>
+            </div>
+            <div id="minigame-container">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal de Mensagem -->
+    <div id="message-modal" class="modal-overlay">
+        <div class="modal-content">
+            <p id="message-text"></p>
+            <button onclick="fecharMensagem()" class="btn-task mt-4">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
